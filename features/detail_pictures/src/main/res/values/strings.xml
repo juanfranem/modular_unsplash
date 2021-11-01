@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="exposure_title">Exposure</string>
+    <string name="iso_title">ISO</string>
+</resources>

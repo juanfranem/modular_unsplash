@@ -1,0 +1,15 @@
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "ViveLibre"
+include ':app'
+include ':core:domain'
+include ':core:app_base'
+include ':features:listing_pictures'
+include ':features:detail_pictures'
+include ':services:local'
+include ':services:remote'

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:startDestination="@id/homeFragment"
+    android:id="@+id/nav_main_graph">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:label="@string/home_fragment"
+        android:name="es.jfechevarria.vivelibre.home.HomeFragment">
+
+        <action
+            android:id="@+id/from_homeFragment_to_listingNav"
+            app:destination="@id/listing_nav"/>
+
+    </fragment>
+
+    <include-dynamic
+        android:name="es.jfechevarria.listing_pictures"
+        android:id="@+id/listing_nav"
+        app:moduleName="listing_pictures"
+        app:graphResName="nav_graph_listing" />
+
+</navigation>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:paddingEnd="9dp"
+        android:paddingStart="9dp"
+        android:text="@string/location"
+        style="@style/TextAppearance.AppCompat.Display1"
+        android:id="@+id/title"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <org.osmdroid.views.MapView
+        app:layout_constraintTop_toBottomOf="@id/title"
+        android:id="@+id/mapView"
+        app:layout_constraintDimensionRatio="2:1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+    <TextView
+        android:textStyle="bold"
+        android:paddingBottom="18dp"
+        android:textAlignment="center"
+        style="@style/TextAppearance.AppCompat.Caption"
+        android:paddingEnd="18dp"
+        android:paddingStart="18dp"
+        android:paddingTop="8dp"
+        android:id="@+id/locationText"
+        app:layout_constraintTop_toBottomOf="@id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

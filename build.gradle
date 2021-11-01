@@ -1,0 +1,56 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    ext {
+        configuration = [
+                compileSdk: 30,
+                minSdk: 21,
+                targetSdk: 30,
+                versionCode: 1,
+                versionName: "1.0"
+        ]
+
+        def koin_version = "3.1.3"
+
+        koinDependencies = [
+                base: "io.insert-koin:koin-android:$koin_version",
+                navigation: "io.insert-koin:koin-androidx-navigation:$koin_version"
+        ]
+        coreDependencies = [
+                androidCore: "androidx.core:core-ktx:1.6.0",
+                appCompat: "androidx.appcompat:appcompat:1.3.1",
+                material: "com.google.android.material:material:1.4.0",
+                paging: "androidx.paging:paging-runtime-ktx:3.0.1",
+                liveData: "androidx.lifecycle:lifecycle-livedata-ktx:2.3.1",
+                viewModels: "androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1",
+                navigationFragment: "androidx.navigation:navigation-fragment-ktx:2.3.5",
+                naviationUI: "androidx.navigation:navigation-ui-ktx:2.3.5",
+                navigationFeature: "androidx.navigation:navigation-dynamic-features-fragment:2.3.5",
+                coil: "io.coil-kt:coil:1.4.0"
+        ]
+        roomDependencies = [
+                base: "androidx.room:room-ktx:2.3.0",
+                compiler: "androidx.room:room-compiler:2.3.0"
+        ]
+        retrofitDependencies = [
+                base: "com.squareup.retrofit2:retrofit:2.6.0",
+                gson: "com.squareup.retrofit2:converter-gson:2.6.0",
+                interceptor: "com.squareup.okhttp3:logging-interceptor:4.5.0"
+        ]
+    }
+
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:7.0.3"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.30"
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:2.3.5"
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

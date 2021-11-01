@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:moduleName="listing_pictures"
+    app:startDestination="@id/listingFragment">
+
+    <fragment
+        android:name="es.jfechevarria.listing_pictures.ui.listing.ListingFragment"
+        android:id="@+id/listingFragment">
+
+        <action
+            app:destination="@id/detail_nav"
+            android:id="@+id/listing_to_detail" />
+
+    </fragment>
+
+    <include-dynamic
+        android:id="@+id/detail_nav"
+        app:moduleName="detail_pictures"
+        app:graphResName="nav_graph_detail"
+        android:name="es.jfechevarria.detail_pictures">
+
+        <argument
+            android:name="pictureId"
+            app:argType="string"/>
+
+    </include-dynamic>
+
+</navigation>
